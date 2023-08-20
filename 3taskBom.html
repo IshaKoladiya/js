@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3_task_Bom</title>
+
+    <style>
+
+		                                                /* task 1 */
+
+		body{
+			margin: 0;
+			padding: 0;
+		}
+.t1{
+	background-image: url('./img/cartoon.jpg');
+    background-size: cover;
+
+}
+.h{
+	text-align: center;
+	padding: 50px;
+	color: white;
+	font-size: 50px;
+	text-shadow: 3px 3px 20px black;
+}
+#start{
+	background-color: pink;
+	color: black;
+	width: 100px;
+	height: 50px;
+	border-radius: 20px 0px 20px 0px;
+	font-weight: bolder;
+	font-size: 20px;
+	margin: 0px 20px;
+}
+
+#stop{
+	background-color: blueviolet;
+	color: black;
+	width: 100px;
+	height: 50px;
+	border-radius: 20px 0px 20px 0px;
+	font-weight: bolder;
+	font-size: 20px;
+	margin: 0px 20px;
+}
+
+#reset{
+	background-color: lightgreen;
+	color: black;
+	width: 100px;
+	height: 50px;
+	border-radius: 20px 0px 20px 0px;
+	font-weight: bolder;
+	font-size: 20px;
+	margin: 0px 20px;
+}
+.btn{
+	text-align: center;
+
+}
+    </style>
+
+</head>
+<body>
+                                                   <!-- task 1 -->
+
+	<div class="t1" style="height: 600px;">
+
+		<h1 class="h">Task 1</h1>
+
+      <div class="btn">
+
+		<button class="btn" id="start">
+			Start</button>
+		<button class="btn" id="stop">
+			Stop</button>
+		<button class="btn" id="reset">
+			Reset</button>
+	  </div>
+       
+		<h1 id="output"></h1>
+
+	</div>
+
+	                                                   <!-- task 2 -->
+         
+    <h1 id="t2"></h1>
+
+
+	                                                  <!-- task 3 -->
+<button id="dise">task 3 diseblde</button>				
+
+<script>
+
+
+                                                 // task 1 
+
+
+let h=0 , m=0 , s=0;
+
+let hh = document.getElementById('output');
+document.write(hh.innerHTML = h + " : "+ m + " : " + s);
+
+
+function watch(){
+	s++;
+	
+
+	if( s>=60 ){
+		s=0;
+		m++;
+	}
+	if( m>=60 ){
+		m=0;
+		h++;
+	}
+
+	let str = h+":"+ m+":"+s;
+
+	document.getElementById('output').innerHTML = str;
+}
+
+document.getElementById('start').addEventListener('click', function(){
+	cc = setInterval(watch, 1000);
+});
+
+document.getElementById('stop').addEventListener('click',function(){
+	clearInterval(cc);
+});
+
+
+document.getElementById('reset').addEventListener('click',function(){
+	h=0;
+	m=0;
+	s=0;
+	document.getElementById('output').innerHTML = h + " : " + m + " : " + s ;
+	cc = setInterval(watch, 1000);
+});
+
+                                            //    task 2
+
+		setInterval(function(){
+			let dt = new Date().toLocaleString();
+			document.getElementById('t2').innerHTML = dt;
+		} , 1000);									
+
+
+		                                    //  task 3
+
+document.getElementById('dise').disabled = true;	
+let c = 0;	
+let t = 10;
+
+let cc = setInterval(function(){
+	c++;
+	t--;
+	document.getElementById('dise').innerHTML = ' please wait for it' + t + "second";
+	if(c == 10){
+		clearInterval(cc);
+		document.getElementById('dise').disabled = false;
+		document.getElementById('dise').innerHTML = "Reset";
+	}
+} , 1000);
+
+
+
+</script>
+
+
+    
+</body>
+</html>

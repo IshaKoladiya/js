@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_validation</title>
+</head>
+<body>
+
+    <!-- <fieldset>
+        <legend>Form Validation</legend>
+    <form action="" method="post" name="ragistration" onsubmit="return cv()">
+            <table>
+                <tr>
+                    <td>
+                        <label>Name : </label>
+                        <input type="text" name="name">
+                    </td>
+                    <td>
+                        <p style="color: red;" id="msg"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender : </label>
+                        <label>
+                            <input type="radio" name="Gender" value="male">Male
+                        </label>
+                        <label>
+                            <input type="radio" name="Gender" value="Female">Female
+                        </label>
+                    </td> 
+
+                    <td>
+                        <p style="color: red;" id="msg2"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">ragistration</button>
+                        <button type="reset">reset</button>
+                    </td>
+                </tr>
+            </table>
+    </form>
+    
+    
+        </fieldset> -->
+
+        <form action="" method="post" name="ep" onsubmit="return empass()">
+            <table>
+                <tr>
+                    <td>
+                        <label>Email : </label>
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>PassWord : </label>
+                        <input type="password" name="pass">
+                    </td>
+                    <td>
+                        <span id="msg3" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">ragistration</button>
+                        <button type="reset">reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    <!-- javascript -->
+
+<script>
+
+// function cv(){
+//     let name = document.forms.ragistration.name.value;
+
+//     let returnStatus = false;
+//     // alert(name)
+
+//     // Name
+
+//     if(name.length == 0){
+//         document.getElementById('msg').innerHTML = 'please Enter Name';
+//         return false;
+//     }
+//     else{
+//         let ptn = /^[a-zA-Z ]+$/;
+
+//         if(name.match(ptn)){
+//             document.getElementById('msg').innerHTML = " ";
+//             returnStatus = true;
+
+//         }
+//         else{
+//             document.getElementById('msg').innerHTML = 'please enter name';
+//             return false;
+//         }
+//     }
+
+//     // gender
+//     let gender = document.forms.ragistration.Gender.value;
+//     // alert(gender)
+
+//     if(gender.length == 0){
+//         document.getElementById('msg2').innerHTML = 'please select Gender';
+//          return false;
+//     }
+//     else{
+//         document.getElementById('msg2').innerHTML = " ";
+//         returnStatus = true;
+//     }
+
+//     return  returnStatus;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// email : addmin@gmail.com
+// password : Hello@123
+
+function empass(){
+    let email = document.forms.ep.email.value;
+    let pass = document.forms.ep.pass.value;
+    // alert(email)
+
+    if(email == 'addmin@gmail.com' && pass == 'Hello@123'){
+        window.location.href = 'https://www.google.com/';
+     return false;
+    }
+    else{
+        document.getElementById('msg3').innerHTML='please valid Email';
+        return false;
+    }
+}
+</script>
+   
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    
+</head>
+<body>
+ 
+
+<script>
+            
+  document.write("<table border='1px'>");
+  
+  document.write("<tr style='font-size:30px;color:#adbce8;background-color:#728a8d;'>");
+  
+let str = Number(prompt('enter start no : '));
+let end = Number(prompt('enter end no : '));
+
+let c=0;
+
+  for(i = str; i<=end ; i++)
+  {
+    c++;
+    if(c>5){
+      document.write("</tr><tr>");
+      c=0;
+    }
+   
+      document.write("<th style='text-align:center;'> [ " + i + " ]</th>");
+    }
+  
+  for(k = 1; k<=10; k++)
+  {
+      var colorCode = "";
+      if(k%2 === 0)
+      {
+          colorCode = "#adbce8";
+      }else{
+          colorCode = "#e9acaa";
+      }
+       
+      document.write("<tr style='background-color:"+ colorCode +" '> ");
+        
+      for(j= 1; j<=end; j++)
+      {
+       document.write("<td style='font-size:23px;text-align:center;'>"+j+" X "+ k + " = " + j*k + "</td>");   
+     
+      }
+      
+       document.write("</tr>"); 
+       
+  }
+
+  document.write("</tr></table>");
+  
+</script>
+
+
+</body>
+</html>

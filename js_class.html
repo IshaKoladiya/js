@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_class</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+<script>
+ // javascript
+
+// ==> class
+
+// class studant{
+//     demo(){
+//           document.write("<br/> demo function");
+//     }
+//     test(){
+//         document.write("<br/> test function");
+//     }
+//     xyz(){
+//         return 10+20;
+//     }
+// }
+
+
+// let obj = new studant();
+// obj.demo();
+// obj.test();
+// let xyz = obj.xyz();
+// document.write("<br/> Answer is : " + xyz);
+
+// ==> constructor 
+
+
+// class studant{
+//     constructor(){
+//         document.write("<br/> constructor function");
+//     }
+//     demo(){
+//           document.write("<br/> demo function");
+//     }
+// }
+
+
+// let obj = new studant();
+// obj.demo();
+
+// ==>  class variable
+
+// // sinple constuctor variable
+// class studant{
+//     constructor(){
+//        this.name = "ishu";
+//        this.bffName = "milu";
+//     }
+//     demo(){
+//           document.write("<br/> Name : " + this.name);
+//           document.write("<br/> Bff Name : "+ this.bffName);
+//     }
+// }
+
+
+// let obj = new studant();
+// obj.demo();
+
+
+// ==> dynamic constuctor variable
+
+// class studant{
+//     constructor(n,bn){
+//        this.name = n;
+//        this.bffName = bn;
+//     }
+//     demo(){
+//           document.write("<br/> Name : " + this.name);
+//           document.write("<br/> Bff Name : "+ this.bffName);
+//     }
+// }
+
+
+// let obj = new studant("ishu","Milu");
+// obj.demo();
+
+
+// ==> inhrritance
+
+// class studant{
+//     demo(){
+//           document.write("<br/> demo function");
+//     }
+//     test(){
+//         document.write("<br/> test function");
+//     }
+   
+// } 
+
+// class func2 extends studant{
+//     inh(){
+//         document.write("<br/> inherite")
+//     }
+// }
+
+// let child = new func2();
+// child.demo();
+// child.test();
+// child.inh();  
+
+// ==> super
+
+class studant{
+    constructor(nm,clg){
+        this.name = nm;
+        this.clgname = clg;
+    }
+}
+
+class assaiment extends studant{
+    constructor(nm,clg,mk){
+        super(nm,clg);
+        this.mark = mk;
+    }
+    printData(){
+    document.write("<br/> name : "+this.name);
+    document.write("<br/> college name : "+this.clgname);
+    document.write("<br/> mark : "+this.mark);
+}
+}
+
+// pass both constructor value
+
+let obj = new assaiment("isha","gandhi college", 98);
+obj.printData();
+</script>
+   
+    
+</body>
+</html>

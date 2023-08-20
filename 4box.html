@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Box</title>
+</head>
+
+<style>
+
+    body{
+        color: black;
+        background-color: white;
+    }
+    button{
+       height: 100px;
+       width: 200px;
+       margin: 20px;
+       text-align: center;
+       font-weight: bolder;
+    }
+    .one{
+     color: black;
+     background-color: lightcoral;
+    }
+    .two{
+    color: black;
+     background-color: lightgreen;
+    }
+    .three{
+        color: black;
+     background-color: lightsalmon;
+    }
+    .four{
+        color: black;
+     background-color: lightskyblue;
+    }
+</style>
+
+<body>
+
+    <button class="one" onclick="myFunc1();">one</button>
+    <button class="two" onclick="myFunc2();">two</button>
+    <button class="three" onclick="myFunc3();">three</button>
+    <button class="four" onclick="myFunc4();">Four</button>
+    
+
+    <!-- js code -->
+
+    <script>
+        function myFunc1() {
+           var element = document.body;
+           element.classList.toggle("one");
+        }
+        function myFunc2() {
+           var element = document.body;
+           element.classList.toggle("two");
+        }
+        function myFunc3() {
+           var element = document.body;
+           element.classList.toggle("three");
+        }
+        function myFunc4() {
+           var element = document.body;
+           element.classList.toggle("four");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom</title>
+</head>
+<body>
+
+
+
+<button id="btn">click open new tab / click close tab</button>
+
+<h1 id="output"></h1>
+
+
+<button id="btnstr">Start</button>
+<button id="btnstop">Stop</button>
+<button id="btnRecet">Reset</button>
+
+
+
+    <script>
+
+    // ** browser 
+
+    //  document.write("<br/> browser width = " + window.innerWidth);
+    //  document.write("<br/> browser heigth = " + window.innerHeight);
+
+    // ** screen
+
+    // document.write("<br/> screen width = " + screen.width);
+    // document.write("<br/> screen heigth = " + screen.height);
+
+
+    // ** Navigation
+
+    // let new_url = "https://www.google.com/"
+    // window.location.href = new_url;
+
+    // ** Hostname
+
+    // document.write(window.location.hostname);
+
+    // ** pathname
+
+    // document.write(window.location.pathname);
+
+    // ** open()
+
+    // document.getElementById('btn').addEventListener('click',function(){
+    //     window.open();
+    // });
+
+    // ** close()
+
+    // document.getElementById('btn').addEventListener('click',function(){
+    //     window.close();
+    // });
+
+    // ** back()
+
+    // window.history.back();
+
+      // ** forward()
+
+    // window.history.forward();
+
+
+                                                     // ** javascript timing function ** //
+
+    // 1. setInterval();
+    // 2. clearInterval();
+    // 3. setTimintout();
+    // 4. clearTimeout();                                                   
+
+                                                          //** 1. setInterval();
+
+    let c = 0 ;
+    function counter(){
+        document.getElementById('output').innerHTML = c;
+        c++;
+    }
+
+    // method - 1
+    //    setInterval(counter,1000);
+
+    // method - 2
+    //   let c = 0;
+    //   setInterval (function(){
+    //    document.getElementById('output').innerHTML = c ;
+    //    c++;
+    //   },1000);
+
+    // method - 3
+
+    // let c = 0;
+    //  let cc = setInterval (function(){
+    //    document.getElementById('output').innerHTML = c ;
+    //    c++;
+    //   },1000);
+
+    // method - 4
+
+    // let cc = setInterval(counter,1000);
+
+                                                    //** 2. clearInterval()
+
+
+// let interval ;
+// document.getElementById('btnstr').addEventListener('click', function(){
+//    interval  = setInterval(counter, 1000);
+// });
+
+// document.getElementById('btnstop').addEventListener('click', function(){
+//    clearInterval(interval);
+// });
+
+
+// document.getElementById('btnRecet').addEventListener('click', function(){
+//    c = 0;
+//    interval  = setInterval(counter, 1000);
+// });
+
+                                                    //**  3.settimeout
+
+
+function demo(){
+    document.getElementById('output').innerHTML = " hello world";
+}
+
+// method - 1
+// setTimeout(demo,2000);
+
+// method - 2
+let interval = setTimeout(demo , 2000);
+
+                                                       //**  4.clearTimeout 
+
+
+   document.getElementById('btnstop').addEventListener('click', function(){
+   clearTimeout(interval);
+
+   });
+
+
+// task - 1  create stop watch with hour, minute and second with start , stop and reset.
+
+// task - 2  create live clock.
+
+// task - 3  by default one button is disabled , it enable after 10 second.
+
+
+
+
+
+    </script>
+   
+
+
+
+
+</body>
+</html>

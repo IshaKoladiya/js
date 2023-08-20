@@ -1,0 +1,13 @@
+
+body[data-theme="light"]{
+    --main-color:black;
+    --sub-color:white;
+}
+body[data-theme="dark"]{
+    --main-color:white;
+    --sub-color:black;
+}
+body{
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}

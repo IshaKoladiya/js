@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_Node</title>
+</head>
+<body>
+
+    <h1>ishu koladiya</h1>
+
+    <p>daddy princess</p>
+
+    <h1 id="data">Life is gourgus...!</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, consectetur.</p>
+
+    <h3>mumma's world</h3>
+
+    <ul id="list">
+        <li>usa</li>
+        <li>pakistan</li>
+        <li>canada</li>
+        <li>china </li>
+        <li>rusaia</li>
+        <li>africa</li>
+    </ul>
+    
+<hr/>
+
+
+                                                   <!-- js part -->
+
+<script>
+
+// ===>  get current node value
+
+// document.write(document.getElementById('data').innerHTML);
+// document.write(document.getElementById('data').firstChild.nodeValue);
+// document.write(document.getElementById('data').childNodes[0].nodeValue);
+    
+// ===> get next element value using spacific element.
+// --> data id pachi no tag
+
+// document.write(document.getElementById('data').nextElementSibling.firstChild.nodeValue);
+// document.write(document.getElementById('data').nextElementSibling.nextElementSibling.firstChild.nodeValue);
+
+// ===> get previous element value using spacific element.
+
+// document.write(document.getElementById('data').previousElementSibling.firstChild.nodeValue);
+// document.write(document.getElementById('data').previousElementSibling.previousElementSibling.firstChild.nodeValue);
+
+// ===> get last child from list
+
+// document.write(document.getElementById('list').lastElementChild.firstChild.nodeValue);
+
+// ===> get First child from list
+
+// document.write(document.getElementById('list').firstElementChild.firstChild.nodeValue);
+
+
+
+
+                                       // ** working with HTML
+
+
+
+// ==>  8. create new element
+
+// let data = document.createElement('h3');
+// data.innerHTML =  'future bigin here';
+
+// let li = document.createElement('li')
+// li.innerHTML = 'surat';
+
+// ==> 9.append element at list
+// --> add to last 
+
+// document.body.append(data);
+// document.getElementById('list').append(li);
+
+// 10. insert element before spacific element 
+
+
+// ex: 1
+// let n_tag = document.createElement("h3");
+// n_tag.innerHTML = "any thing...!"
+
+// let before = document.getElementById('data');
+// document.body.insertBefore(n_tag,before)
+
+// ex:2
+
+// let li = document.createElement("li");
+// li.innerHTML = "allways be happy";
+
+// let bf = document.getElementById('list').firstElementChild.nextElementSibling.nextElementSibling;
+// document.write(bf.firstChild.nodeValue);
+// document.getElementById('list').insertBefore(li,bf);
+
+// 11.remove spacific element
+
+// document.getElementById('data').remove();
+// document.getElementById('list').remove();
+
+// 12.remove spacific child frome present
+
+let remove_tag = document.getElementById('data').previousElementSibling;
+document.body.removeChild(remove_tag);
+
+
+// let rt = document.getElementById('list').firstElementChild.nextElementSibling;
+// document.getElementById('list').removeChild(rt);
+
+
+
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Word Facility</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+
+   
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-5">My Word Facility</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label> Write Something Here,</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <textarea name="text" id="input" cols="140" rows="8" style="resize: none;" title="text" placeholder="Enter text"></textarea>
+               
+            </div>
+        </div>
+    
+    </div>
+
+   <hr/>
+
+   <h1 class="ms-5">Preview : </h1>
+
+   <p  class="ms-5" id="preview" style="height: 100px;"></p>
+
+   <hr/>
+
+   <button type="reset" id="btnclr" class="btn btn-primary ms-5">clear</button>
+   <button type="reset" id="btnReset" class="btn btn-primary ms-5">Reset</button>
+   <button type="reset" id="Upper" class="btn btn-primary ms-5">UpperCase</button>
+   <button type="reset" id="Lower" class="btn btn-primary ms-5">LowerCase</button>
+   <button type="reset" id="cap" class="btn btn-primary ms-5">Capitalize</button>
+
+   <div class="ms-5 mt-5">
+    <h3 class="mb-5">Formatting</h3>
+    <button type="reset" id="bold" class="btn btn-primary ">Bold</button>
+    <button type="reset" id="italic" class="btn btn-primary ms-5">Italic</button>
+    <button type="reset" id="under" class="btn btn-primary ms-5">UnderLine</button>
+   </div>
+  
+   <div class="ms-5 mt-5">
+    <h3 class="mb-5">Alignment</h3>
+    <button type="reset" id="left" class="btn btn-primary ">left</button>
+    <button type="reset" id="center" class="btn btn-primary ms-5">center</button>
+    <button type="reset" id="right" class="btn btn-primary ms-5">right</button>
+    <button type="reset" id="justify" class="btn btn-primary ms-5">Justify</button>
+   </div>
+
+   <div class="container ms-5 mt-5">
+    <div class="row">
+        <div class="col">
+            <h2>Font Size</h2>
+                <select style="width:150px ;"  class="p-2" name="font" id="list">
+                    <option value=""> Font size</option>
+                    <option value="10">10px</option>
+                    <option value="30">30px</option>
+                    <option value="50">50px</option>
+                    <option value="70">70px</option>
+                    <option value="90">90px</option>
+                    <option value="110">110px</option>
+                    <option value="130">130</option>
+                </select>
+        </div>
+        <div class="col">
+            <h2>Font Family</h2>
+                <select style="width:150px ;" class="p-2" name="font" id="ff">
+                    <option value=""> Font Family</option>
+                    <option value="Ink Free">Ink free</option>
+                    <option value="MingLiU_HKSCS-ExtB">MingLiU_HKSCS-ExtB</option>
+                    <option value="Segoe Script">Segoe Script</option>
+                    <option value="Small Fonts">Small Fonts</option>
+                    <option value="Air Millhouse">Air Millhouse</option>
+                 
+                </select>
+        </div>
+
+        <div class="col">
+            <h2>Font Color</h2>
+            <input type="color" id="clr">
+        </div>
+    </div>
+    
+   </div>
+
+<!-- js -->
+
+   <script>
+
+        //   preview
+
+        document.getElementById('input').addEventListener("keyup",function(){
+            let val = document.getElementById('input').value;
+            document.getElementById('preview').innerHTML = val;
+        });
+      
+        // clear
+
+        document.getElementById('btnclr').addEventListener('click', function(){
+            document.getElementById("input").value = " ";
+            document.getElementById("preview").innerHTML = " ";
+        });
+
+        // btn Reset
+        document.getElementById('btnReset').addEventListener('click', function(){
+            document.getElementById("preview").style.cssText = " ";
+           
+        });
+
+        // UpperCase
+
+        document.getElementById("Upper").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textTransform = "UpperCase"){
+                preview.style.textTransform = " ";
+            }
+            else{
+                preview.style.textTransform = "UpperCase";
+            }
+        });
+
+        // LowerCase
+
+        document.getElementById("Lower").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textTransform = "LowerCase"){
+                preview.style.textTransform = " ";
+            }
+            else{
+                preview.style.textTransform = "LowerCase";
+            }
+        });
+
+          // Capitalige
+
+          document.getElementById("cap").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textTransform = "CapitaliZe"){
+                preview.style.textTransform = " ";
+            }
+            else{
+                preview.style.textTransform = "Capitalize";
+            }
+        });
+
+        // bold
+
+        document.getElementById("bold").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.fontWeight = "Bold"){
+                preview.style.fontWeight = " ";
+            }
+            else{
+                preview.style.fontWeight = "Bold";
+            }
+        });
+
+        // Italic
+
+        document.getElementById("italic").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.fontStyle = "italic"){
+                preview.style.fontStyle = " ";
+            }
+            else{
+                preview.style.fontStyle = "italic";
+            }
+        });
+
+         // Under line
+
+         document.getElementById("under").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textDecoration = "UnderLine"){
+                preview.style.textDecoration = "normal ";
+            }
+            else{
+                preview.style.textDecoration = "UnderLine";
+            }
+        });
+
+         // Left
+
+         document.getElementById("left").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textAlign = "left"){
+                preview.style.textAlign = " ";
+            }
+            else{
+                preview.style.textAlign = "left";
+            }
+        });
+
+        // Right
+
+        document.getElementById("right").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textAlign = "Right"){
+                preview.style.textAlign = " ";
+            }
+            else{
+                preview.style.textAlign = "Right";
+            }
+        });
+
+         // center
+
+         document.getElementById("center").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textAlign = "center"){
+                preview.style.textAlign = " ";
+            }
+            else{
+                preview.style.textAlign = "center";
+            }
+        });
+
+         // justyfiy
+
+         document.getElementById("justify").addEventListener("click", function(){
+            let preview = document.getElementById("preview");
+
+            if(preview.style.textAlign = "Justify"){
+                preview.style.textAlign = " ";
+            }
+            else{
+                preview.style.textAlign = "Justify";
+            }
+        });
+
+        // font size dropdown
+
+    document.getElementById('list').addEventListener("change",function(){
+       
+        let preview = document.getElementById('preview');
+        preview.style.fontSize = this.value + 'px';
+
+
+});
+
+        // font family
+
+    document.getElementById('ff').addEventListener("change",function(){
+       
+       let preview = document.getElementById('preview');
+       preview.style.fontFamily = this.value;
+
+
+});
+
+       // font color
+
+         document.getElementById('clr').addEventListener("change",function(){
+       
+       let preview = document.getElementById('preview');
+       preview.style.color = this.value;
+
+
+});
+
+
+   </script>
+
+
+
+<script src="./../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
